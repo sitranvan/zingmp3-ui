@@ -1,0 +1,9 @@
+//! CSS THEME LIGHT DARK
+.menu-item {
+  &.activeLightDark {
+    background-color: blue;
+  }
+  &.activeRed {
+    background-color: red;
+  }
+}

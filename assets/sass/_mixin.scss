@@ -1,0 +1,67 @@
+@mixin tooltip-before($top, $bottom) {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  left: 50%;
+  transform: translateX(-50%);
+  top: $top;
+  bottom: $bottom;
+}
+@mixin tooltip($top, $bottom) {
+  position: absolute;
+  background-color: $tooltip-bg;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  top: $top;
+  bottom: $bottom;
+  @include animationFadeIn();
+}
+@mixin tooltip-title {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: $text-primary-color;
+  white-space: nowrap;
+  padding: 5px 10px;
+}
+
+@mixin center($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin animationFadeIn {
+  animation: fadeIn 0.2s linear;
+}
+
+@keyframes spin-on {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-off {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}

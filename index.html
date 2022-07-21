@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zing-MP3</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- https://ionic.io/ionicons -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+  <div class="app show-slider">
+    <!-- Layout -->
+    <section class="layout">
+      <!-- menu -->
+      <div class="menu">
+        <!-- menu top -->
+        <div class="menu-top">
+          <div class="menu-logo">
+            <img src="https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt=""
+              class="menu-logo__img" />
+          </div>
+
+          <!-- nav -->
+          <nav class="menu-nav">
+            <ul class="menu-list">
+              <li class="menu-item menu-item__profile">
+                <span class="menu-item__icon material-icons">
+                  music_video
+                </span>
+                <span class="menu-item__title">Cá Nhân</span>
+              </li>
+              <li class="menu-item menu-item__explore active">
+                <span class="menu-item__icon material-icons"> adjust </span>
+                <span class="menu-item__title">Khám Phá</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item__icon material-icons">
+                  query_stats
+                </span>
+                <span class="menu-item__title">#zingchart</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item__icon material-icons">
+                  track_changes
+                </span>
+                <span class="menu-item__title">Radio</span>
+                <img src="https://zjs.zadn.vn/zmp3-desktop/dev/147506/static/media/live-tag.e25dd240.svg" alt=""
+                  class="menu-item__radio" />
+              </li>
+              <li class="menu-item">
+                <span class="menu-item__icon material-icons"> dvr</span>
+                <span class="menu-item__title">Theo Dõi</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- menu bottom -->
+        <div class="menu-bottom">
+          <nav class="menu-nav">
+            <ul class="menu-list">
+              <li class="menu-item menu-item--more">
+                <span class="menu-item__icon material-icons">
+                  audio_file
+                </span>
+                <span class="menu-item__title">Nhạc Mới</span>
+              </li>
+              <li class="menu-item menu-item--more">
+                <span class="menu-item__icon material-icons">
+                  interests
+                </span>
+                <span class="menu-item__title">Thể Loại</span>
+              </li>
+              <li class="menu-item menu-item--more">
+                <span class="menu-item__icon material-icons">
+                  star_outline
+                </span>
+                <span class="menu-item__title">Top 100</span>
+              </li>
+              <li class="menu-item menu-item--more">
+                <span class="menu-item__icon material-icons"> live_tv </span>
+                <span class="menu-item__title">MV</span>
+              </li>
+            </ul>
+          </nav>
+          <!-- menu VIP -->
+          <div class="menu-vip">
+            <h4 class="menu-vip__title">
+              Nghe nhạc không quảng cáo cùng kho nhạc VIP
+            </h4>
+            <a href="https://zingmp3.vn/vip?utm_source=desktop&utm_campaign=VIP&utm_medium=sidebar"
+              class="menu-vip__link">Nâng cấp VIP</a>
+          </div>
+          <!-- menu libary -->
+          <div class="menu-libary">
+            <nav class="menu-nav">
+              <div class="menu-libary__head">
+                <span class="menu-libary__heading"> Thư viện </span>
+                <span class="menu-libary__edit material-icons" style="font-size: 1.8rem">
+                  edit
+                </span>
+              </div>
+              <ul class="menu-list">
+                <li class="menu-item menu-item--libary">
+                  <img src="https://img.icons8.com/color-glass/48/000000/music-library.png" class="menu-libary__img" />
+                  <span class="menu-item__title">Bài hát</span>
+                </li>
+                <li class="menu-item menu-item--libary">
+                  <img src="https://img.icons8.com/material/48/26e07f/playlist.png" class="menu-libary__img" />
+                  <span class="menu-item__title">Playlist</span>
+                </li>
+                <li class="menu-item menu-item--libary">
+                  <span class="menu-libary__icon material-icons" style="font-size: 1.8rem">
+                    alarm
+                  </span>
+                  <span class="menu-item__title">Gần đây</span>
+                </li>
+                <li class="menu-item menu-item--playlist">
+                  <span class="menu-item__title">Playlist #1</span>
+                </li>
+                <li class="menu-item menu-item--playlist">
+                  <span class="menu-item__title">Playlist #2</span>
+                </li>
+                <li class="menu-item menu-item--playlist">
+                  <span class="menu-item__title">Playlist #3</span>
+                </li>
+                <li class="menu-item menu-item--playlist">
+                  <span class="menu-item__title">Playlist #4</span>
+                </li>
+              </ul>
+
+              <p class="menu-all">Xem tất cả</p>
+            </nav>
+          </div>
+          <!-- menu new list -->
+          <div class="menu-newlist">
+            <span class="menu-newlist__icon material-icons"> add </span>
+            <span class="menu-newlist__title">Tạo playlist mới</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- music container -->
+      <section class="container">
+        <div class="profile">
+          <div class="header">
+            <div class="header-left">
+              <div class="header-icon">
+                <span class="material-icons header-icon__back"> west </span>
+                <span class="material-icons"> east </span>
+              </div>
+              <div class="header-search">
+                <span class="header-search__icon material-icons" style="font-size: 2.8rem">
+                  search
+                </span>
+                <input type="text" class="header-search__input" placeholder="Nhập tên bài hát, nghệ sĩ, hoặc MV..." />
+                <span class="header-search__delete material-icons" style="font-size: 1.8rem">
+                  clear
+                </span>
+              </div>
+            </div>
+            <div class="header-right">
+              <ul class="header-list">
+                <li class="header-item header-item--theme header-tooltip">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6787/6787994.png" alt="" />
+                  <div class="tooltip-bottom">
+                    <span class="tooltip-bottom__title">Chủ đề</span>
+                  </div>
+                </li>
+                <li class="header-item header-tooltip">
+                  <span class="header-item__icon material-icons">
+                    diamond
+                  </span>
+                  <div class="tooltip-bottom">
+                    <span class="tooltip-bottom__title">Nâng cấp VIP</span>
+                  </div>
+                </li>
+                <li class="header-item header-tooltip">
+                  <span class="header-item__icon material-icons">
+                    file_upload
+                  </span>
+                  <div class="tooltip-bottom">
+                    <span class="tooltip-bottom__title">Tải lên</span>
+                  </div>
+                </li>
+                <li class="header-item header-tooltip">
+                  <span class="header-item__icon material-icons">
+                    settings
+                  </span>
+                  <div class="tooltip-bottom">
+                    <span class="tooltip-bottom__title">Cài đặt</span>
+                  </div>
+                </li>
+                <li class="header-item">
+                  <img class="header-item__avatar" src="./assets/image/avatar.jpg" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- control -->
+    <section class="control">
+      <audio src="" id="audio"></audio>
+      <!-- control left -->
+      <div class="control-left">
+        <!-- control song -->
+        <div class="control-song">
+          <div class="control-song__img">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXaJjoRMDZRSMBSftxxAAZb5bpbVuZXSc80w&usqp=CAU"
+              alt="" />
+            <div class="control-song__zoom">
+              <span class="material-icons"> open_in_full </span>
+            </div>
+          </div>
+
+          <div class="control-song__info">
+            <h6 class="control-song__name">Đông Phai Mờ Dáng Ai</h6>
+            <span class="control-song__singer">Datkkaa</span>
+          </div>
+
+          <div class="control-song__action">
+            <div class="control-song__icon control-tooltip">
+              <span class="material-icons" style="font-size: 2rem">
+                favorite
+              </span>
+              <div class="tooltip-top">
+                <span class="tooltip-top__title">
+                  Thêm vào danh sách yêu thích
+                </span>
+              </div>
+            </div>
+
+            <div class="control-song__icon control-tooltip">
+              <span class="material-icons" style="font-size: 2rem">
+                more_horiz
+              </span>
+              <div class="tooltip-top">
+                <span class="tooltip-top__title"> Thêm </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- control center -->
+      <div class="control-center">
+        <!-- control-media -->
+        <ul class="control-media">
+          <li id="random-btn" class="control-media__icon control-tooltip">
+            <span class="material-icons" style="font-size: 2.5rem">
+              shuffle
+            </span>
+            <div class="tooltip-top">
+              <span class="tooltip-top__title"> Phát ngẫu nhiên </span>
+            </div>
+          </li>
+          <li id="prev-btn" class="control-media__icon">
+            <span class="material-icons" style="font-size: 2.8rem">
+              skip_previous
+            </span>
+          </li>
+          <li id="play-pause-btn" class="control-media__icon">
+            <span id="icon-play-pause" class="material-icons" style="font-size: 2.8rem">
+              play_arrow
+            </span>
+          </li>
+          <li id="next-btn" class="control-media__icon">
+            <span class="icon-next material-icons" style="font-size: 2.8rem">
+              skip_next
+            </span>
+          </li>
+          <li id="play-option" title="repeat-off" class="control-media__icon control-tooltip">
+            <span id="play-option-icon" class="material-icons" style="font-size: 2.5rem">
+              repeat
+            </span>
+            <div class="tooltip-top">
+              <span class="tooltip-top__title"> Bật phát lại tất cả </span>
+            </div>
+          </li>
+        </ul>
+        <!-- control progress -->
+        <div class="control-progress">
+          <span id="current-time" class="control-currenttime">00:00</span>
+          <input id="range-song" type="range" class="control-range" min="1" max="100" value="0" />
+          <span id="duration" class="control-duration">00:00</span>
+        </div>
+      </div>
+      <!-- control right -->
+      <div class="control-right">
+        <ul class="control-more">
+          <li class="control-more__icon control-tooltip">
+            <span class="material-icons" style="font-size: 1.9rem"> 4k </span>
+            <div class="tooltip-top">
+              <span class="tooltip-top__title"> MV</span>
+            </div>
+          </li>
+          <li class="control-more__icon control-tooltip">
+            <span class="material-icons" style="font-size: 1.9rem">
+              mic_none
+            </span>
+            <div class="tooltip-top">
+              <span class="tooltip-top__title"> Xem lời bài hát </span>
+            </div>
+          </li>
+          <li class="control-more__icon control-tooltip">
+            <span class="material-icons" style="font-size: 1.9rem"> tv </span>
+            <div class="tooltip-top">
+              <span class="tooltip-top__title">Chế độ cửa sổ </span>
+            </div>
+          </li>
+          <li class="control-more__icon control-more__icon--volume">
+            <label id="volume-icon" for="volume" class="material-icons" style="font-size: 1.9rem">
+              volume_up
+            </label>
+            <input type="range" min="0" max="100" value="100" id="volume" />
+          </li>
+        </ul>
+        <div class="control-list control-tooltip">
+          <span class="material-icons" style="font-size: 1.9rem">
+            queue_music
+          </span>
+          <div class="tooltip-top tooltip-top--list">
+            <span class="tooltip-top__title">Danh sách phát </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="render-option"></div>
+  <div class="message">
+    <span class="message-text"></span>
+    <span class="material-icons message-icon"> close </span>
+  </div>
+  <section class="theme-show">
+    <div class="overlay-theme"></div>
+    <div class="theme">
+      <span class="material-icons theme-close" style="font-size: 4rem">
+        close
+      </span>
+      <div class="theme-header">
+        <h2 class="theme-text">Giao Diện</h2>
+      </div>
+      <div class="theme-content">
+        <div class="">
+          <span class="theme-theme">Dyamic</span>
+          <ul class="theme-list theme-list--dynamic"></ul>
+          <ul class="theme-list theme-list--theme"></ul>
+          <ul class="theme-list theme-list--single"></ul>
+          <ul class="theme-list theme-list--dark"></ul>
+          <ul class="theme-list theme-list--light"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

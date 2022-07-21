@@ -1,0 +1,35 @@
+// Color
+$text-primary-color: #ffff;
+$text-secondary-color: #dadada;
+$text-third-color: #ffffff80;
+$menu-bg: #231b2e;
+$primary-bg: #170f23;
+$secondary-bg: #7200a1;
+$control-bg: #120c1c;
+$active-bg: #393243;
+$tooltip-bg: #3b3b3b;
+$vip-bg: #ffdb00;
+$clock-bg: #d1a45b;
+$input-range-bg: hsla(0, 0%, 100%, 0.4);
+$overlay-avatar-bg: rgba(black, 0.35);
+$list-control-bg: #2a2533;
+$border-left-bg: #2e2938;
+$header-color-bg: #eeeeee;
+$input-bg: #2f2739;
+$input-history-color: #432275;
+$icon-right-header-bg: hsla(0, 0%, 100%, 0.1);
+$icon-right-header-color: #d8d8d8;
+
+// value
+$menu-width: 240px;
+$menu-top-height: 275px;
+$distance-menu-left: 28px;
+$header-height: 70px;
+$control-height: 90px;
+$border-left-menu: 3px;
+$mr-top-logo: 12px;
+
+$scale-rate-second: calc(190 / 230);
+$scale-rate-third: calc(160 / 230);
+$move-x-second: calc(0px - ((230px - (230px * $scale-rate-second)) / 2 + 20px));
+$move-x-third: calc(0px - ((230px - (230px * $scale-rate-third)) / 2 + 40px));
